@@ -57,10 +57,10 @@ alias cat="bat"
 alias sail='[ -f sail ] && sail || vendor/bin/sail'
 
 # Laravel
-alias a="artisan"
-alias tinker="artisan tinker"
-alias serve="artisan serve"
-alias mfs="artisan migrate:fresh --seed"
+alias a="php artisan"
+alias tinker="php artisan tinker"
+alias serve="php artisan serve"
+alias mfs="php artisan migrate:fresh --seed"
 
 alias va="valet php artisan"
 alias vc="valet composer"
