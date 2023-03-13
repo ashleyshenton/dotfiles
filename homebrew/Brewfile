@@ -1,0 +1,90 @@
+# Taps
+tap "axllent/apps"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+tap "minio/stable"
+tap "nicoverbruggen/cask"
+tap "shivammathur/extensions"
+tap "shivammathur/php"
+
+# Packages
+brew "bash"
+brew "bat"
+brew "php"
+brew "composer"
+brew "coreutils"
+brew "dnsmasq"
+brew "gh"
+brew "git"
+brew "go"
+brew "grep"
+brew "pkg-config"
+brew "htop"
+brew "mackup"
+brew "mas"
+brew "meilisearch", restart_service: true
+brew "minio", restart_service: true
+brew "mysql@5.7", restart_service: true, link: true
+brew "neovim", args: ["HEAD"]
+brew "nginx"
+brew "node"
+brew "php@8.0"
+brew "php@8.1"
+brew "pnpm"
+brew "pv"
+brew "redis", restart_service: true
+brew "tmux"
+brew "wget"
+brew "yarn"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "axllent/apps/mailpit"
+brew "koekeishiya/formulae/skhd", args: ["HEAD"]
+brew "koekeishiya/formulae/yabai"
+brew "shivammathur/extensions/imagick@8.1"
+brew "shivammathur/extensions/imagick@8.2"
+brew "shivammathur/extensions/redis@8.1"
+brew "shivammathur/extensions/redis@8.2"
+brew "shivammathur/extensions/xdebug@8.1"
+brew "shivammathur/extensions/xdebug@8.2"
+
+# Casks
+cask "aerial"
+cask "appcleaner"
+cask "authy"
+cask "dbngin"
+cask "discord"
+cask "docker"
+cask "firefox-developer-edition"
+cask "font-jetbrains-mono-nerd-font"
+cask "github"
+cask "google-chrome"
+cask "gpg-suite"
+cask "imageoptim"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "karabiner-elements"
+cask "krisp"
+cask "microsoft-edge"
+cask "microsoft-teams"
+cask "ngrok"
+cask "omnidisksweeper"
+cask "onyx"
+cask "phpmon"
+cask "postman"
+cask "raycast"
+cask "shottr"
+cask "tableplus"
+cask "visual-studio-code"
+cask "warp"
+
+# App Store
+mas "AdGuard for Safari", id: 1440147259
+mas "Magnet", id: 441258766
+mas "The Unarchiver", id: 425424353
+mas "WireGuard", id: 1451685025

@@ -1,0 +1,12 @@
+return {}
+-- return {
+--
+-- --  { "arturgoms/moonbow.nvim" },
+--   -- Configure LazyVim to load gruvbox
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = "moonbow",
+--     },
+--   },
+-- }

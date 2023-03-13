@@ -1,0 +1,91 @@
+#--------------------------------------------------------------------------
+# Oh My Zsh
+#--------------------------------------------------------------------------
+
+export ZSH=$HOME/.oh-my-zsh
+
+DEFAULT_USER=`whoami`
+HYPHEN_INSENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="dd.mm.yyyy"
+VI_MODE_SET_CURSOR=true
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+export UPDATE_ZSH_DAYS=6
+
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+##### WHAT YOU WANT TO DISABLE FOR WARP - BELOW
+autoload -Uz compinit && compinit
+ZSH_THEME="agnoster"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(
+    git
+)
+##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
+fi
+
+source $ZSH/oh-my-zsh.sh
+
+#--------------------------------------------------------------------------
+# Configuration
+#--------------------------------------------------------------------------
+
+# Decrease delay that vi-mode waits for the end of a key sequence
+export KEYTIMEOUT=15
+
+typeset -U path cdpath fpath
+path=(
+    $HOME/.local/bin
+    $HOME/.composer/vendor/bin
+    ./vendor/bin
+    ./node_modules/.bin
+    $path
+)
+
+export EDITOR=vim
+export GIT_EDITOR=vim
+
+unsetopt sharehistory
+
+#--------------------------------------------------------------------------
+# Aliases
+#--------------------------------------------------------------------------
+
+alias vim="nvim"
+alias nano="nvim"
+alias cat="bat"
+alias sail='[ -f sail ] && sail || vendor/bin/sail'
+
+# Laravel
+alias a="artisan"
+alias tinker="artisan tinker"
+alias serve="artisan serve"
+alias mfs="artisan migrate:fresh --seed"
+
+alias va="valet php artisan"
+alias vc="valet composer"
+
+# Git
+alias g="git"
+alias gs="git s"
+alias nah="git reset --hard;git clean -df"
+alias co="git checkout"
+alias main='git checkout $([ `git rev-parse --quiet --verify master` ] && echo "master" || echo "main")'
+
+# Docker
+alias d="docker"
+alias dc="docker compose"
+
+gpint() {
+  PINT=$([ -f "vendor/bin/pint" ] && echo "vendor/bin/pint" || echo "pint")
+  "$PINT" $@
+}
+
+#--------------------------------------------------------------------------
+# Miscellaneous
+#--------------------------------------------------------------------------
+
+# pnpm
+export PNPM_HOME="~/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
