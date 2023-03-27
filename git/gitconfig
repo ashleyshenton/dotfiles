@@ -22,18 +22,6 @@
     ds = diff --staged
     dw = diff --word-diff
 
-    f = flow
-
-    ff = flow feature
-    ffs = flow feature start
-    ffo = flow feature checkout
-    ffp = flow feature publish
-
-    fh = flow hotfix
-    fhs = flow hotfix start
-    fho = flow hotfix checkout
-    fhp = flow hotfix publish
-
     l = log
     lg = log --graph
     lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset'
