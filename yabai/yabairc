@@ -36,4 +36,5 @@ yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^PhpStorm$" manage=off
+yabai -m rule --add app="^krisp$" manage=off
 yabai -m rule --add app="^Microsoft Teams$" title="^Microsoft Teams Notification$" manage=off

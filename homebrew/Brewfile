@@ -1,10 +1,8 @@
 # Taps
 tap "axllent/apps"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "minio/stable"
@@ -30,7 +28,7 @@ brew "mackup"
 brew "mas"
 brew "meilisearch", restart_service: true
 brew "minio", restart_service: true
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 brew "nginx"
 brew "node"
 brew "pnpm"
@@ -41,7 +39,7 @@ brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "axllent/apps/mailpit"
-brew "koekeishiya/formulae/skhd", args: ["HEAD"]
+brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
 # Casks
