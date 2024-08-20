@@ -4,7 +4,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "minio/stable"
 tap "nicoverbruggen/cask"
 tap "shivammathur/extensions"
@@ -39,11 +38,9 @@ brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "axllent/apps/mailpit"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
 
 # Casks
-cask "aerial"
+cask "aerospace"
 cask "appcleaner"
 cask "dbngin"
 cask "discord"
@@ -72,6 +69,4 @@ cask "warp"
 
 # App Store
 mas "AdGuard for Safari", id: 1440147259
-mas "Magnet", id: 441258766
 mas "The Unarchiver", id: 425424353
-mas "WireGuard", id: 1451685025
