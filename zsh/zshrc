@@ -53,7 +53,7 @@ unsetopt sharehistory
 
 alias vim="nvim"
 alias nano="nvim"
-alias cat="bat"
+alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo 'Catppuccin-macchiato' || echo 'Catppuccin-latte')"
 alias sail='[ -f sail ] && sail || vendor/bin/sail'
 
 # Laravel
