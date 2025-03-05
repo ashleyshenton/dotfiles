@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #--------------------------------------------------------------------------
 # Oh My Zsh
 #--------------------------------------------------------------------------
@@ -14,12 +21,11 @@ export UPDATE_ZSH_DAYS=6
 
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 ##### WHAT YOU WANT TO DISABLE FOR WARP - BELOW
-autoload -Uz compinit && compinit
-ZSH_THEME="agnoster"
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 ##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
 fi
@@ -64,6 +70,7 @@ alias mfs="php artisan migrate:fresh --seed"
 
 alias va="valet php artisan"
 alias vc="valet composer"
+alias vp="valet php"
 
 # Git
 alias g="git"
@@ -94,3 +101,5 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
   [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
